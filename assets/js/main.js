@@ -37,7 +37,7 @@ let calc = () => {
             totalPlusTip = tip + inputTotal01;
             console.log(tip, totalPlusTip);
             payPP = totalPlusTip / inputGuests01;
-            output.innerHTML = `<p><p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+            output.innerHTML = `<p>Das Trinkgeld sollte ${tip.toFixed(2)} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip.toFixed(2)} EUR.</p><p>Der Preis pro Person liegt bei ${payPP.toFixed(2)} EUR.</p>`
             console.log("test1");
 
         }
@@ -47,7 +47,7 @@ let calc = () => {
             totalPlusTip = tip + inputTotal01;
             console.log(tip, totalPlusTip);
             payPP = totalPlusTip / inputGuests01;
-            output.innerHTML = `<p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+            output.innerHTML = `<p>Das Trinkgeld sollte ${tip.toFixed(2)} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip.toFixed(2)} EUR.</p><p>Der Preis pro Person liegt bei ${payPP.toFixed(2)} EUR.</p>`
             console.log("test02");
         }
         else if (inputSatisfied.value == 1) {
@@ -55,7 +55,7 @@ let calc = () => {
             totalPlusTip = tip + inputTotal01;
             console.log(tip, totalPlusTip);
             payPP = totalPlusTip / inputGuests01;
-            output.innerHTML = `<p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+            output.innerHTML = `<p>Das Trinkgeld sollte ${tip.toFixed(2)} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip.toFixed(2)} EUR.</p><p>Der Preis pro Person liegt bei ${payPP.toFixed(2)} EUR.</p>`
             console.log("test03");
         }
 

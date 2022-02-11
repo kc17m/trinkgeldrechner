@@ -23,11 +23,12 @@ select, input[type=submit] {
 } 
 
 select {
-    width: 80%;
+    width: 60%;
+    border-radius: 5px;
 }
 
 input[type=submit] {    
-    width: 45%;
+    width: 30%;
     margin: 5% auto;
     border-radius: 5px;
     padding: 2%;
