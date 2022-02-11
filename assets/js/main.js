@@ -51,7 +51,7 @@ let calc = () => {
             console.log("test02");
         }
         else if (inputSatisfied.value == 1) {
-            tip = inputTotal * 0.02;
+            tip = inputTotal01 * 0.02;
             totalPlusTip = tip + inputTotal01;
             console.log(tip, totalPlusTip);
             payPP = totalPlusTip / inputGuests01;
