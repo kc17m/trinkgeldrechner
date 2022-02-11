@@ -20,42 +20,71 @@ console.log(inputSatisfied.value);
 let output = document.getElementById("output");
 console.log(output);
 
+let myForm = document.getElementById("myForm");
+
 let tip, totalPlusTip, payPP;
 
 let calc = () => {
     console.log("test");
-    inputTotal = Number(inputTotal.value);
-    inputGuests = Number(inputGuests.value);
-    console.log(inputTotal, inputGuests);
+    let inputTotal01 = Number(inputTotal.value);
+    let inputGuests01 = Number(inputGuests.value);
+    console.log(inputTotal01, inputGuests01);
 
-    if (inputSatisfied.value == 3) {
-        tip = inputTotal * 0.2;
-        totalPlusTip = tip + inputTotal;
-        console.log(tip, totalPlusTip);
-        payPP = totalPlusTip / inputGuests;
-        output.innerHTML = `<p><p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+
+    if (inputTotal01 && inputGuests01) {
+        if (inputSatisfied.value == 3) {
+            tip = inputTotal01 * 0.2;
+            totalPlusTip = tip + inputTotal01;
+            console.log(tip, totalPlusTip);
+            payPP = totalPlusTip / inputGuests01;
+            output.innerHTML = `<p><p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+            console.log("test1");
+
+        }
+
+        else if (inputSatisfied.value == 2) {
+            tip = inputTotal01 * 0.1;
+            totalPlusTip = tip + inputTotal01;
+            console.log(tip, totalPlusTip);
+            payPP = totalPlusTip / inputGuests01;
+            output.innerHTML = `<p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+            console.log("test02");
+        }
+        else if (inputSatisfied.value == 1) {
+            tip = inputTotal * 0.02;
+            totalPlusTip = tip + inputTotal01;
+            console.log(tip, totalPlusTip);
+            payPP = totalPlusTip / inputGuests01;
+            output.innerHTML = `<p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+            console.log("test03");
+        }
+
+        else {
+            output.innerHTML = `<p>Die Servicebewertung fehlt.</p>`
+            console.log("test04");
+        }
     }
 
-    else if (inputSatisfied.value == 2) {
-        tip = inputTotal * 0.1;
-        totalPlusTip = tip + inputTotal;
-        console.log(tip, totalPlusTip);
-        payPP = totalPlusTip / inputGuests;
-        output.innerHTML = `<p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+
+
+    else if (!inputTotal01) {
+        output.innerHTML = `<p>Bitte Rechnungsbetrag angeben.</p>`;
+        console.log("test05");
     }
-    else if (inputSatisfied.value == 1) {
-        tip = inputTotal * 0.02;
-        totalPlusTip = tip + inputTotal;
-        console.log(tip, totalPlusTip);
-        payPP = totalPlusTip / inputGuests;
-        output.innerHTML = `<p><p>Das Trinkgeld sollte ${tip} EUR betragen.</p><p>Die Gesamtsumme beträgt dann ${totalPlusTip} EUR.</p><p>Der Preis pro Person liegt bei ${payPP} EUR.</p>`
+
+    else if (!inputGuests01) {
+        output.innerHTML = `<p>Bitte Anzahl zahlender Gäste angeben.</p>`;
+        console.log("test06");
     }
 
     else {
-        output.innerHTML = `<p>Servicebewertung fehlt</p>`
+        output.innerHTML = `<p>Sorry, hier ist etwas falsch gelaufen.</p>`
+        console.log("test07");
     }
 
 }
+
+
 
 
 

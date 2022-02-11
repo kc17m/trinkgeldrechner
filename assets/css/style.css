@@ -31,8 +31,7 @@ input[type=submit] {
     margin: 5% auto;
     border-radius: 5px;
     padding: 2%;
-    text-align: center;   
-
+    text-align: center;  
 }
 
 #output {

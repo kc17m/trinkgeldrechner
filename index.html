@@ -15,23 +15,23 @@
     <main>
         <h1>Trinkgeldrechner</h1>
         <fieldset>
-            <form action="" onsubmit="return false ">
-                <label for="total">Wie hoch war die Rechnung?</label><br>💯 <input type="number" name="total"
-                    id="total">
+            <form id="myForm" action="" onsubmit="return false ">
+                <label for="total">Wie hoch war die Rechnung?</label><br>💯 <input type="number" name="total" id="total"
+                    required>
 
                 <br><br>
 
                 <label for="guests">Wie viele Gäste teilen sich die Rechnung?</label>
                 <br>
-                👨‍👩‍👧‍👦 <input type="number" name="guests" id="guests">
+                👨‍👩‍👧‍👦 <input type="number" name="guests" id="guests" required>
                 <br><br>
                 <label for="satisfied">Wie war der Service?</label>
                 <br>
-                <select name="satisfied" id="satisfied">
+                <select name="satisfied" id="satisfied" required>
                     <option value="0">Bitte Service bewerten</option>
                     <option value="3">Super</option>
                     <option value="2">OK</option>
-                    <option value="1">So lala</option>
+                    <option value="1">Nicht so toll</option>
                 </select>
                 <br><br>
                 <div class="flexi">
